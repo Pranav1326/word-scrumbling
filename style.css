@@ -15,12 +15,47 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.navbar{
+    background-color: #607EAA;
+    position: fixed;
+    top: 0;
+    color: #1C3879;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.player-name,
+.score-and-limit,
+.score-and-limit>div{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.score-and-limit{
+    gap: 3rem;
+}
+
+#playerNameValue,
+#scoreValue,
+#guessCounter{
+    color: #F9F5EB;
+}
+
+#playerNameValue{
+    text-transform: capitalize;
+}
+
 .box{
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: 1rem;
     border-radius: 5px;
     background: #607EAA;

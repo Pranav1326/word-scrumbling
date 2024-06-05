@@ -5,49 +5,66 @@ const timeEl = document.getElementById('time');
 const refreshBtn = document.getElementById('refresh');
 const checkBtn = document.getElementById('check');
 const input = document.getElementById('guess');
+const playerNameVal = document.getElementById('playerNameValue');
+const scoreVal = document.getElementById("scoreValue");
+const guessCounterVal = document.getElementById("guessCounter");
 let inputAnswer = "";
+let playerName;
+let score = 0;
+let guessCounter = 3;
+
+playerName = prompt("Please enter your name: ");
+playerNameVal.innerText = playerName;
 
 // Word array with hints
 const words = [
     {
         word: "hello",
         hint: "word for greeting",
-        time: 10
+        time: 100,
+        score: 5
     },
     {
         word: "steering",
         hint: "by which direction change of a car",
-        time: 30
+        time: 300,
+        score: 15
     },
     {
         word: "mouse",
         hint: "a mammal and computer device",
-        time: 15
+        time: 150,
+        score: 10
     },
     {
         word: "keyboard",
         hint: "standard typing device",
-        time: 30
+        time: 300,
+        score: 20
     },
     {
         word: "monitor",
         hint: "standard output device",
-        time: 30
+        time: 300,
+        score: 20
     },
     {
         word: "pi",
         hint: "Important for calculate diameter",
-        time: 10
+        time: 100,
+        score: 5
     },
     {
         word: "flute",
         hint: "Musical breathing instrument",
-        time: 20
+        time: 200,
+        score: 10
     },
     {
         word: "fridge",
         hint: "It's very cold",
-        time: 20
+        time: 200,
+        score: 10
     }
 ];
 
@@ -69,7 +86,7 @@ const init = () => {
 }
 
 // Refresh Button
-refreshBtn.addEventListener('click', () => {
+const refresher = () => {
     init();
     stopCount();
     counter=words[randForArr].time;
@@ -77,13 +94,16 @@ refreshBtn.addEventListener('click', () => {
     randWord = words[randForArr].word;
     seprateWord();
     input.focus();
-});
+}
+refreshBtn.addEventListener('click', refresher);
 
 // Check Button function
 const checkAnswer = () => {
     inputAnswer = input.value.toLowerCase();
     if (inputAnswer === words[randForArr].word){
-        alert(`Correct.`);
+        alert(`Correct. +${words[randForArr].score} points`);
+        score = score + words[randForArr].score;
+        scoreVal.innerText = score;
         init();
         stopCount();
         counter=words[randForArr].time;
@@ -91,8 +111,20 @@ const checkAnswer = () => {
         input.focus();
     } 
     else{
-        alert(`Wrong!`);
-        input.focus();
+        guessCounter--;
+        if(guessCounter <= 0){
+            alert(`Ah ohh! You lost your score of ${score}. but you can always try again 😃`);
+            score = 0;
+            scoreVal.innerText = score;
+            guessCounter = 3;
+            guessCounterVal.innerText = guessCounter;
+            refresher();
+        }
+        else{
+            alert(`Wrong! ${guessCounter} guesses remains.`);
+            guessCounterVal.innerText = guessCounter;
+            input.focus();
+        }
     }
 }
 
