@@ -21,50 +21,188 @@ const words = [
     {
         word: "hello",
         hint: "word for greeting",
-        time: 100,
+        time: 50,
         score: 5
     },
     {
         word: "steering",
         hint: "by which direction change of a car",
-        time: 300,
+        time: 60,
         score: 15
     },
     {
         word: "mouse",
         hint: "a mammal and computer device",
-        time: 150,
+        time: 50,
         score: 10
     },
     {
         word: "keyboard",
         hint: "standard typing device",
-        time: 300,
+        time: 60,
         score: 20
     },
     {
         word: "monitor",
         hint: "standard output device",
-        time: 300,
+        time: 60,
         score: 20
     },
     {
         word: "pi",
         hint: "Important for calculate diameter",
-        time: 100,
+        time: 30,
         score: 5
     },
     {
         word: "flute",
         hint: "Musical breathing instrument",
-        time: 200,
+        time: 60,
         score: 10
     },
     {
         word: "fridge",
         hint: "It's very cold",
-        time: 200,
+        time: 60,
         score: 10
+    },
+    {
+        word: "algorithm",
+        hint: "Step-by-step procedure",
+        time: 100,
+        score: 20
+    },
+    {
+        word: "python",
+        hint: "A programming language and a snake",
+        time: 60,
+        score: 10
+    },
+    {
+        word: "guitar",
+        hint: "A string musical instrument",
+        time: 70,
+        score: 15
+    },
+    {
+        word: "volcano",
+        hint: "Mountain that erupts",
+        time: 100,
+        score: 20
+    },
+    {
+        word: "bicycle",
+        hint: "Two-wheeled vehicle",
+        time: 80,
+        score: 10
+    },
+    {
+        word: "calendar",
+        hint: "Tracks days and months",
+        time: 60,
+        score: 10
+    },
+    {
+        word: "diamond",
+        hint: "Precious stone, hardest material",
+        time: 60,
+        score: 15
+    },
+    {
+        word: "umbrella",
+        hint: "Used for rain protection",
+        time: 60,
+        score: 10
+    },
+    {
+        word: "calculator",
+        hint: "Device for mathematical operations",
+        time: 60,
+        score: 15
+    },
+    {
+        word: "satellite",
+        hint: "Orbits the Earth",
+        time: 80,
+        score: 20
+    },
+    {
+        word: "penguin",
+        hint: "Flightless bird, lives in Antarctica",
+        time: 100,
+        score: 10
+    },
+    {
+        word: "chocolate",
+        hint: "Sweet treat made from cacao",
+        time: 100,
+        score: 15
+    },
+    {
+        word: "airplane",
+        hint: "Flying vehicle",
+        time: 100,
+        score: 20
+    },
+    {
+        word: "kangaroo",
+        hint: "Marsupial with a pouch",
+        time: 120,
+        score: 15
+    },
+    {
+        word: "rainbow",
+        hint: "Colorful arc in the sky",
+        time: 60,
+        score: 10
+    },
+    {
+        word: "photograph",
+        hint: "Picture taken with a camera",
+        time: 120,
+        score: 15
+    },
+    {
+        word: "microscope",
+        hint: "Used to see tiny objects",
+        time: 80,
+        score: 20
+    },
+    {
+        word: "whisper",
+        hint: "Speak very softly",
+        time: 80,
+        score: 10
+    },
+    {
+        word: "thermometer",
+        hint: "Measures temperature",
+        time: 100,
+        score: 15
+    },
+    {
+        word: "telescope",
+        hint: "Used to observe stars",
+        time: 120,
+        score: 20
+    },
+    {
+        word: "sandcastle",
+        hint: "Built at the beach",
+        time: 120,
+        score: 15
+    },
+    {
+        word: "pineapple",
+        hint: "Tropical fruit with spiky skin",
+        time: 80,
+        score: 15
+    },
+    {
+        word: "astronaut",
+        hint: "Travels to space",
+        time: 120,
+        score: 20
     }
 ];
 
