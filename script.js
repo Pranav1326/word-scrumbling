@@ -97,10 +97,23 @@ const refresher = () => {
 }
 refreshBtn.addEventListener('click', refresher);
 
+const inputValidator = () => {
+    if(input.value == ""){
+        alert(`Please enter the input properly!`);
+        return false;
+    }
+    return true;
+}
+
 // Check Button function
 const checkAnswer = () => {
     inputAnswer = input.value.toLowerCase();
-    if (inputAnswer === words[randForArr].word){
+    let validator = inputValidator();
+    console.log(validator);
+    if(!validator){
+        return;
+    }
+    if (validator && (inputAnswer === words[randForArr].word)){
         alert(`Correct. +${words[randForArr].score} points`);
         score = score + words[randForArr].score;
         scoreVal.innerText = score;

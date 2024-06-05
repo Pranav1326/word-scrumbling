@@ -62,6 +62,10 @@ body{
     color: #1C3879;
 }
 
+.box>p{
+    letter-spacing: 1px;
+}
+
 hr{
     border: none;
     border-top: 2px dashed #1C3879;
@@ -79,6 +83,7 @@ input{
     color: #F9F5EB;
     font-size: 1.5rem;
     padding: 0.5rem;
+    width: 100%;
 }
 
 input:focus{
@@ -89,6 +94,7 @@ input:focus{
     margin-top: 1rem;
     display: flex;
     justify-content: space-around;
+    gap: 1rem;
 }
 
 button{
@@ -111,12 +117,25 @@ button:focus{
 
 /* Meadia queries */
 
+@media only screen and (max-width: 570px) {
+    .navbar{
+        flex-direction: column;
+    }
+}
 @media only screen and (max-width: 376px) {
     .box{
         width: 20rem;
     }
     input{
         width: -webkit-fill-available;
+    }
+    .player-name>h1,
+    .score-and-limit>div>h2{
+        font-size: 1.2rem;
+    }
+    .score-and-limit{
+        flex-direction: column;
+        gap: 0;
     }
 }
 @media only screen and (max-width: 331px) {
@@ -128,5 +147,9 @@ button:focus{
     }
     .btns{
         flex-direction: column;
+    }
+    .player-name>h1,
+    .score-and-limit>div>h2{
+        font-size: 1rem;
     }
 }
